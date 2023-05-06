@@ -4,6 +4,7 @@ import { fetchUserCards } from "../../redux/operation";
 import { selectUsersCard, selectPage } from "../../redux/selectors";
 import UserCard from "../UserCard/UserCard";
 import LoadMore from "../LoadMore/LoadMore";
+import { List, Item } from "./UserCardList.styled";
 
 const UserCardList = () => {
   const dispatch = useDispatch();
@@ -11,19 +12,18 @@ const UserCardList = () => {
   const page = useSelector(selectPage);
 
   useEffect(() => {
-    console.log('I WORK');
     dispatch(fetchUserCards(page));
   }, [dispatch, page]);
 
   return (
     <>
-      <ul>
+      <List>
         {usersCard.map((userCard) => (
-          <li key={userCard.id}>
+          <Item key={userCard.id}>
             <UserCard userCard={userCard} />
-          </li>
+          </Item>
         ))}
-      </ul>
+      </List>
       <LoadMore />
     </>
   );

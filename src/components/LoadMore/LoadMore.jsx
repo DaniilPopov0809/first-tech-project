@@ -1,13 +1,14 @@
 import { useDispatch } from "react-redux";
 import { nextPage } from "../../redux/usersCardSlice";
+import { BlueButton } from "../UserCard/UserCards.styled";
 
 const LoadMore = () => {
   const dispatch = useDispatch();
 
   return (
-    <button type="button" onClick={() => dispatch(nextPage())}>
+    <BlueButton type="button" onClick={() => dispatch(nextPage())}>
       Load more
-    </button>
+    </BlueButton>
   );
 };
 

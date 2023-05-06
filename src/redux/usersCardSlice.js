@@ -25,56 +25,20 @@ export const usersSlice = createSlice({
     nextPage (state)  {
       state.page = state.page + 1;
     },
-      //     state.users = state.users.map((user) => {
-      //       console.log(action);
-      //       if (user.id === action.payload) {
-      //         console.log('I here');
-      //         return {
-      //           ...user,
-      //           followers: user.followers + 1,
-      //         };
-      //       }
-      //       console.log(user.id);
-      //       return user;
-      //     });
-      //   },
-    // increment (state, action)  {
-    //   state.users = state.users.map((user) => {
-    //     console.log(action);
-    //     if (user.id === action.payload) {
-    //       console.log('I here');
-    //       return {
-    //         ...user,
-    //         followers: user.followers + 1,
-    //       };
-    //     }
-    //     console.log(user.id);
-    //     return user;
-    //   });
-    // },
-  //   decrement (state, action)  {
-  //     state.users = state.users.map((user) => {
-  //       if (user.id === action.payload) {
-  //         return {
-  //           ...user,
-  //           followers: user.followers - 1,
-  //         };
-  //       }
-  //       return user;
-  //     });
-  //   },
   },
 
   extraReducers: (builder) => {
     builder
-      // .addCase(fetchUserCards.pending, handlePending)
+      .addCase(fetchUserCards.pending, handlePending)
       .addCase(fetchUserCards.fulfilled, (state, action) => {
+        if (action.payload.length === 0) {
+          alert('Карточек больше нет!');
+        }
         state.isLoading = false;
         state.error = null;
-        console.log(state.users.length)
         state.users =  [...state.users, ...action.payload];
       })
-      // .addCase(fetchUserCards.rejected, handleRejected)
+      .addCase(fetchUserCards.rejected, handleRejected)
       .addCase(enableFollow.pending, handlePending)
       .addCase(enableFollow.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -111,6 +75,4 @@ export const usersSlice = createSlice({
 });
 
 export const usersReducer = usersSlice.reducer;
-// export const { increment, decrement } = usersSlice.actions;
-
 export const { nextPage } = usersSlice.actions;
