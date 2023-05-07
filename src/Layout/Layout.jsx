@@ -1,6 +1,7 @@
-import { Container } from "./Layout.styled";
+import { RotatingLines } from  'react-loader-spinner'
+import { Container, Centered } from "./Layout.styled";
 import { NavLink } from "react-router-dom";
-// import { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
@@ -15,16 +16,22 @@ return (
      </nav>
     </header>
     <main>
-    <Outlet />
-      {/* <Suspense
+    
+      <Suspense
         fallback={
-          <LoaderWrapper>
-            <Loader />
-          </LoaderWrapper>
+            <Centered>
+            <RotatingLines
+            strokeColor="#ebd8ff"
+            strokeWidth="5"
+            animationDuration="0.75"
+            width="96"
+            visible={true}
+          />
+          </Centered>
         }
       >
         <Outlet />
-      </Suspense> */}
+      </Suspense>
     </main>
     <footer>
       {/* <FooterWrappper>

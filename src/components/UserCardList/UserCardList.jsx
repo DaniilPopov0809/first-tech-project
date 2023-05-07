@@ -12,7 +12,6 @@ const UserCardList = () => {
   const page = useSelector(selectPage);
 
   useEffect(() => {
-   console.log('I WORK');
     dispatch(fetchUserCards(page));
   }, [dispatch, page]);
 

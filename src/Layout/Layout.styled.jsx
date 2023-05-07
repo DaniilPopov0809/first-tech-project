@@ -15,3 +15,10 @@ export const Container = styled.div`
     width: 1280px;
   }
 `;
+
+export const Centered = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
