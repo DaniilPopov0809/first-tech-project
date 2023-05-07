@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/first-tech-project/static/css/main.5b745df9.css",
-    "main.js": "/first-tech-project/static/js/main.99eb1ebf.js",
+    "main.css": "/first-tech-project/static/css/main.8117505c.css",
+    "main.js": "/first-tech-project/static/js/main.9085790a.js",
     "static/js/787.fa807d0e.chunk.js": "/first-tech-project/static/js/787.fa807d0e.chunk.js",
     "index.html": "/first-tech-project/index.html",
-    "main.5b745df9.css.map": "/first-tech-project/static/css/main.5b745df9.css.map",
-    "main.99eb1ebf.js.map": "/first-tech-project/static/js/main.99eb1ebf.js.map",
+    "main.8117505c.css.map": "/first-tech-project/static/css/main.8117505c.css.map",
+    "main.9085790a.js.map": "/first-tech-project/static/js/main.9085790a.js.map",
     "787.fa807d0e.chunk.js.map": "/first-tech-project/static/js/787.fa807d0e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b745df9.css",
-    "static/js/main.99eb1ebf.js"
+    "static/css/main.8117505c.css",
+    "static/js/main.9085790a.js"
   ]
 }
