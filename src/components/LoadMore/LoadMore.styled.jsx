@@ -10,4 +10,6 @@ export const ButtonWrap = styled.div`
 
 export const Button = styled(BlueButton)`
   margin-bottom: 0;
+  display: flex;
+  align-items: center;
 `;
