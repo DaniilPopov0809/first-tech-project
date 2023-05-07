@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchUserCards, fetchAllUserCards } from "../../redux/operation";
+import { fetchUserCards } from "../../redux/operation";
 import { selectUsersCard, selectPage } from "../../redux/selectors";
 import UserCard from "../UserCard/UserCard";
 
@@ -12,7 +12,7 @@ const UserCardList = () => {
   const page = useSelector(selectPage);
 
   useEffect(() => {
-    dispatch(fetchAllUserCards());
+   console.log('I WORK');
     dispatch(fetchUserCards(page));
   }, [dispatch, page]);
 

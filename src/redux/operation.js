@@ -10,25 +10,14 @@ export const fetchUserCards = createAsyncThunk(
     try {
       
       const response = await axios.get(`/users?page=${page}&limit=3`);
-      return response.data;
+      const responseAll = await axios.get('/users');
+      return {response: response.data, responseAll:responseAll.data};
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }
   }
 );
 
-export const fetchAllUserCards = createAsyncThunk(
-  "users/fetchAllUserCards",
-  async (_, thunkAPI) => {
-    try {
-      
-      const response = await axios.get('/users');
-      return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
-    }
-  }
-);
 
 export const enableFollow = createAsyncThunk(
   "users/enableFollow",
