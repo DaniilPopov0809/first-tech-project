@@ -1,5 +1,5 @@
 import messageImg from "../../images/message.png";
-import logo from "../../images/logo.png";
+import logo from "../../images/_logo.png";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { enableFollow, disableFollow } from "../../redux/operation";
