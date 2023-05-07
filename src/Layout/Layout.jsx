@@ -1,6 +1,6 @@
 import { Container } from "./Layout.styled";
 import { NavLink } from "react-router-dom";
-import { Suspense } from 'react';
+// import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
