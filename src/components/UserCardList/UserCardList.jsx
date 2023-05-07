@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchUserCards } from "../../redux/operation";
+import { fetchUserCards, fetchAllUserCards } from "../../redux/operation";
 import { selectUsersCard, selectPage } from "../../redux/selectors";
 import UserCard from "../UserCard/UserCard";
-import LoadMore from "../LoadMore/LoadMore";
+
 import { List, Item } from "./UserCardList.styled";
 
 const UserCardList = () => {
@@ -12,6 +12,7 @@ const UserCardList = () => {
   const page = useSelector(selectPage);
 
   useEffect(() => {
+    dispatch(fetchAllUserCards());
     dispatch(fetchUserCards(page));
   }, [dispatch, page]);
 
@@ -24,7 +25,6 @@ const UserCardList = () => {
           </Item>
         ))}
       </List>
-      <LoadMore />
     </>
   );
 };

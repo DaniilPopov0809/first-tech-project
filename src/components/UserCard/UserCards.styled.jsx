@@ -14,7 +14,6 @@ export const Card = styled.div`
   );
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
-  
 `;
 
 export const Logo = styled.img`
@@ -100,16 +99,14 @@ export const BlueButton = styled.button`
   cursor: pointer;
   transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-
   &:hover,
   &:focus {
     scale: 1.05;
   }
- 
 `;
 
 export const GreenButton = styled(BlueButton)`
-    background-color: #5CD3A8;  
+  background-color: #5cd3a8;
 `;
 
 export const InteractiveField = styled.div``;

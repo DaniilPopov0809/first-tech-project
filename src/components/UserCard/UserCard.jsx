@@ -1,5 +1,5 @@
 import messageImg from "../../images/message.png";
-import logo from "../../images/Logo.png";
+import logo from "../../images/logo.png";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { enableFollow, disableFollow } from "../../redux/operation";
@@ -17,6 +17,7 @@ import {
   Logo,
   InteractiveField,
 } from "./UserCards.styled";
+
 
 const UserCard = ({ userCard }) => {
   const { tweets, avatar, followers, id } = userCard;
@@ -42,7 +43,7 @@ const UserCard = ({ userCard }) => {
 
   return (
     <Card>
-      <Logo src={logo} alt="logo" />
+      <Logo src={logo} alt="logo"/>
       <Image src={messageImg} alt="decoration" />
       <Line />
       <AvatarWrap>
