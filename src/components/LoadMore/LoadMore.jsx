@@ -4,20 +4,25 @@ import { nextPage } from "../../redux/usersCardSlice";
 import { ButtonWrap } from "./LoadMore.styled";
 import { Button } from "./LoadMore.styled";
 import { selectIsLoading } from "../../redux/selectors";
+import { selectFilter } from "../../redux/selectors";
+import { filterCard } from "../../redux/filterSlice";
 const Scroll = require("react-scroll");
 
 const LoadMore = () => {
   const scroll = Scroll.animateScroll;
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
+  const filter = useSelector(selectFilter);
 
   const handleClick = () => {
     dispatch(nextPage());
+   dispatch(filterCard('all'));
     scroll.scrollToBottom();
   };
 
   return (
-    <ButtonWrap>
+     <ButtonWrap>
+      {/* { filter === 'all' &&  */}
       <Button type="button" onClick={handleClick}>
         Load more{" "}
         {isLoading && (
@@ -34,8 +39,9 @@ const LoadMore = () => {
             strokeWidthSecondary={10}
           />
         )}
-      </Button>
-    </ButtonWrap>
+      </Button> 
+      {/* } */}
+    </ButtonWrap> 
   );
 };
 

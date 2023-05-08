@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 export const BackLink = styled(Link)`
   display: inline-block;
   padding: 14px 28px;
-  margin-bottom: 30px;
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;

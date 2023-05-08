@@ -1,10 +1,9 @@
 import { RotatingLines } from "react-loader-spinner";
 import { Container, Centered } from "./Layout.styled";
-import { NavLink } from "react-router-dom";
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import  NavigationMenu  from "../components/NavigationMenu/NavigationMenu";
 const Layout = () => {
   const [showFallback, setShowFallback] = useState(false);
 
@@ -18,14 +17,7 @@ const Layout = () => {
     <Container>
       <header>
         <nav>
-          <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/tweets">Tweets</NavLink>
-            </li>
-          </ul>
+          <NavigationMenu />
         </nav>
       </header>
       <main>

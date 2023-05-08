@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchUserCards, enableFollow, disableFollow } from "./operation";
+import { toast } from "react-toastify";
 
 const initialState = {
   users: [],
@@ -17,6 +18,8 @@ const handlePending = (state) => {
 const handleRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
+  console.log(action.payload);
+  toast.error(`${action.payload}`);
 };
 
 export const usersSlice = createSlice({
@@ -27,13 +30,33 @@ export const usersSlice = createSlice({
     nextPage(state) {
       state.page = state.page + 1;
     },
+
+    addUsersStatus(state, action) {
+      const findUserIndex = state.users.findIndex(
+        (user) => user.id === action.payload.id
+      );
+
+      if (findUserIndex !== -1) {
+        state.users[findUserIndex] = {
+          ...state.users[findUserIndex],
+          isFollowing: action.payload.isFollowing,
+        };
+      } else {
+        state.users = [
+          ...state.users,
+          {
+            ...state.users.find((user) => user.id === action.payload.id),
+            isFollowing: action.payload.isFollowing,
+          },
+        ];
+      }
+    },
   },
 
   extraReducers: (builder) => {
     builder
       .addCase(fetchUserCards.pending, handlePending)
       .addCase(fetchUserCards.fulfilled, (state, action) => {
-        console.log(action.payload);
         state.isLoading = false;
         state.error = null;
         state.users = [
@@ -84,4 +107,4 @@ export const usersSlice = createSlice({
 });
 
 export const usersReducer = usersSlice.reducer;
-export const { nextPage } = usersSlice.actions;
+export const { nextPage, addUsersStatus } = usersSlice.actions;

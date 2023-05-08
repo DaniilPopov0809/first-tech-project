@@ -1,9 +1,10 @@
 import messageImg from "../../images/message.png";
-import logo from "../../images/_logo.png";
+import logo from "../../images/logo.png";
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { enableFollow, disableFollow } from "../../redux/operation";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
+import { addUsersStatus } from "../../redux/usersCardSlice";
 import {
   Card,
   Avatar,
@@ -18,29 +19,34 @@ import {
   InteractiveField,
 } from "./UserCards.styled";
 
-
 const UserCard = ({ userCard }) => {
   const { tweets, avatar, followers, id } = userCard;
   const dispatch = useDispatch();
 
-  const [isFollowing, setIsFollowing] = useState(
+  
+
+  const [isFollowing, setIsFollowing] = useState( 
     () => JSON.parse(localStorage.getItem(`following_${id}`)) || false
   );
 
   useEffect(() => {
+    
     localStorage.setItem(`following_${id}`, JSON.stringify(isFollowing));
-  }, [id, isFollowing]);
+    dispatch(addUsersStatus({id, isFollowing}));
+  }, [id, isFollowing, dispatch]);
 
   const handleClick = () => {
     setIsFollowing(!isFollowing);
     if (isFollowing === false) {
-      dispatch(enableFollow({ id, followers }));
+      dispatch(enableFollow({ id, followers, isFollowing }));
+      
     }
     if (isFollowing === true) {
-      dispatch(disableFollow({ id, followers }));
+      dispatch(disableFollow({ id, followers, isFollowing }));
+      
     }
   };
-
+  
   return (
     <Card>
       <Logo src={logo} alt="logo"/>
@@ -68,12 +74,12 @@ const UserCard = ({ userCard }) => {
 
 export default UserCard;
 
-UserCard.propTypes = {
-  userCard: PropTypes.exact({
-    user: PropTypes.string,
-    tweets: PropTypes.number,
-    followers: PropTypes.number,
-    avatar: PropTypes.string,
-    id: PropTypes.string,
-  }),
-};
+// UserCard.propTypes = {
+//   userCard: PropTypes.exact({
+//     user: PropTypes.string,
+//     tweets: PropTypes.number,
+//     followers: PropTypes.number,
+//     avatar: PropTypes.string,
+//     id: PropTypes.string,
+//   }),
+// };
