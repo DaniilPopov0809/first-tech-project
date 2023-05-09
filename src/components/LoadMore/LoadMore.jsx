@@ -16,28 +16,29 @@ const LoadMore = () => {
   const handleClick = () => {
     dispatch(nextPage());
     scroll.scrollToBottom();
-    
   };
 
   return (
     <ButtonWrap>
-     {filter === 'all' && <Button type="button" onClick={handleClick}>
-        Load more{" "}
-        {isLoading && (
-          <Oval
-            height={20}
-            width={20}
-            color="#5736a3"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-            ariaLabel="oval-loading"
-            secondaryColor="#ae7be3"
-            strokeWidth={10}
-            strokeWidthSecondary={10}
-          />
-        )}
-      </Button>}
+      {filter === "all" && (
+        <Button type="button" onClick={handleClick}>
+          Load more{" "}
+          {isLoading && (
+            <Oval
+              height={20}
+              width={20}
+              color="#5736a3"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+              ariaLabel="oval-loading"
+              secondaryColor="#ae7be3"
+              strokeWidth={10}
+              strokeWidthSecondary={10}
+            />
+          )}
+        </Button>
+      )}
     </ButtonWrap>
   );
 };

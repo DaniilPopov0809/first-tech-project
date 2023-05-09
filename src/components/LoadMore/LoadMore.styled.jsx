@@ -17,5 +17,4 @@ export const Button = styled(BlueButton)`
   &:focus {
     background: #5cd3a8;
   }
-  
 `;
