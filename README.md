@@ -2,7 +2,7 @@
 Simple app for viewing user cards with tweets.
 ## **View aplication**
 
-![Screnshot view aplication](./src/screenshots/weetCards.jpg)
+![Screnshot view aplication](./src/screenshots/tweetCards.jpg)
 
 ## Technology stack
 
