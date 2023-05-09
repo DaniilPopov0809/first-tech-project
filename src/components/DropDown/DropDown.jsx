@@ -23,8 +23,6 @@ const DropDown = () => {
 
   const handleChange = (event) => {
     dispatch(filterCard(event.target.value));
-
-    console.log(filter);
   };
 
   return (
