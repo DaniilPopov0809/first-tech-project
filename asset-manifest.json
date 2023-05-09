@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/first-tech-project/static/css/main.4f03b9a6.css",
-    "main.js": "/first-tech-project/static/js/main.29b18f06.js",
+    "main.js": "/first-tech-project/static/js/main.b63b6ede.js",
     "static/js/544.4ebbf0d9.chunk.js": "/first-tech-project/static/js/544.4ebbf0d9.chunk.js",
-    "static/js/59.d81d9c38.chunk.js": "/first-tech-project/static/js/59.d81d9c38.chunk.js",
+    "static/js/59.df81a371.chunk.js": "/first-tech-project/static/js/59.df81a371.chunk.js",
     "static/js/787.fa807d0e.chunk.js": "/first-tech-project/static/js/787.fa807d0e.chunk.js",
     "static/js/764.8fac4be1.chunk.js": "/first-tech-project/static/js/764.8fac4be1.chunk.js",
     "index.html": "/first-tech-project/index.html",
     "main.4f03b9a6.css.map": "/first-tech-project/static/css/main.4f03b9a6.css.map",
-    "main.29b18f06.js.map": "/first-tech-project/static/js/main.29b18f06.js.map",
+    "main.b63b6ede.js.map": "/first-tech-project/static/js/main.b63b6ede.js.map",
     "544.4ebbf0d9.chunk.js.map": "/first-tech-project/static/js/544.4ebbf0d9.chunk.js.map",
-    "59.d81d9c38.chunk.js.map": "/first-tech-project/static/js/59.d81d9c38.chunk.js.map",
+    "59.df81a371.chunk.js.map": "/first-tech-project/static/js/59.df81a371.chunk.js.map",
     "787.fa807d0e.chunk.js.map": "/first-tech-project/static/js/787.fa807d0e.chunk.js.map",
     "764.8fac4be1.chunk.js.map": "/first-tech-project/static/js/764.8fac4be1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4f03b9a6.css",
-    "static/js/main.29b18f06.js"
+    "static/js/main.b63b6ede.js"
   ]
 }
