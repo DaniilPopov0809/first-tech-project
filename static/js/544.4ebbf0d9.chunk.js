@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfirst_tech_project=self.webpackChunkfirst_tech_project||[]).push([[544],{9544:function(e,t,i){i.r(t);var s=i(1087),c=i(184);t.default=function(){return(0,c.jsxs)("h1",{children:["Welcome, this is a simple application for viewing user cards with twets. Click ",(0,c.jsx)(s.rU,{to:"/tweets",children:"here"})," to view application."]})}}}]);
+//# sourceMappingURL=544.4ebbf0d9.chunk.js.map

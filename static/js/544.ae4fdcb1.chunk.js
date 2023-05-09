@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkfirst_tech_project=self.webpackChunkfirst_tech_project||[]).push([[544],{9544:function(e,t,c){c.r(t);var r=c(184);t.default=function(){return(0,r.jsx)("h1",{children:"WELCOME HOME PAGE!"})}}}]);
-//# sourceMappingURL=544.ae4fdcb1.chunk.js.map
