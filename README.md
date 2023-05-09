@@ -2,7 +2,7 @@
 
 ## **View aplication**
 
-![Screnshot view aplication](https://ibb.co/XJXNHxS)
+![Screnshot view aplication](/src/screenshots/tweetCards.jpg)
 
 ## Technology stack
 
