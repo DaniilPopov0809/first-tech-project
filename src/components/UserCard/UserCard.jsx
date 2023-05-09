@@ -5,6 +5,7 @@ import { useDispatch} from "react-redux";
 import { enableFollow, disableFollow } from "../../redux/operation";
 import PropTypes from "prop-types";
 import { addUsersStatus } from "../../redux/usersCardSlice";
+import { toast } from "react-toastify";
 import {
   Card,
   Avatar,
@@ -37,11 +38,12 @@ const UserCard = ({ userCard }) => {
     setIsFollowing(!isFollowing);
     if (isFollowing === false) {
       dispatch(enableFollow({ id, followers }));
+      toast.info(`You following ${user}!`)
       
     }
     if (isFollowing === true) {
       dispatch(disableFollow({ id, followers }));
-      
+      toast.info(`You unfollowing ${user}!`)
     }
   };
   
