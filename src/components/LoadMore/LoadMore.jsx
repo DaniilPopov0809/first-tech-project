@@ -13,7 +13,8 @@ const LoadMore = () => {
   const isLoading = useSelector(selectIsLoading);
   const filter = useSelector(selectFilter);
 
-  const handleClick = () => {
+  const handleClick = (event) => {
+    event.target.blur();
     dispatch(nextPage());
     scroll.scrollToBottom();
   };

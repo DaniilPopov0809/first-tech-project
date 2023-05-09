@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { LinkTweets, Title } from "./Home.styled"
 
 const Home = () => {
     
 return (
-    <h1>Welcome, this is a simple application for viewing user cards with twets.
-        Click <Link to='/tweets'>here</Link> to view application.
-    </h1>
+    
+    <Title>Welcome, this is a simple application for viewing user cards with twets.
+        Click <LinkTweets to='/tweets'>Tweets</LinkTweets> to view application.
+    </Title>
 )
 }
 

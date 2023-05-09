@@ -1,5 +1,5 @@
 export const formStyle = {
-  width: "250px",
+  maxWidth: "250px",
 };
 
 export const selectStyle = {
@@ -7,6 +7,7 @@ export const selectStyle = {
   textTransform: "uppercase",
   fontSize: "18px",
   lineHeight: "22px",
+  color: "#373737",
   "&:hover .MuiOutlinedInput-notchedOutline": {
     borderColor: "#5cd3a8",
   },
@@ -17,8 +18,10 @@ export const selectStyle = {
     borderColor: "#ebd8ff",
     borderRadius: "10px",
     borderWidth: "2px",
+    boxShadow: "0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25)",
   },
   ".MuiSelect-icon": {
+    padingTop: "10px",
     color: "#373737",
     fontSize: "28px",
   },

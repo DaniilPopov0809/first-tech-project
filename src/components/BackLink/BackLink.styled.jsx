@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export const BackLink = styled(Link)`
   display: inline-block;
+  
   padding: 14px 28px;
   text-decoration: none;
   font-weight: 600;
@@ -16,6 +17,9 @@ export const BackLink = styled(Link)`
   border: none;
   cursor: pointer;
   transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   display: flex;
+  
 
   &:hover,
   &:focus {
