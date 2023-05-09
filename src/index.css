@@ -8,6 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  outline: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -27,3 +31,6 @@ img {
   display: block;
   width: 100%;
 }
+
+:root {
+  --toastify-toast-background: blue;}

@@ -5,7 +5,7 @@ import { ButtonWrap } from "./LoadMore.styled";
 import { Button } from "./LoadMore.styled";
 import { selectIsLoading } from "../../redux/selectors";
 import { selectFilter } from "../../redux/selectors";
-import { filterCard } from "../../redux/filterSlice";
+
 const Scroll = require("react-scroll");
 
 const LoadMore = () => {
@@ -16,21 +16,19 @@ const LoadMore = () => {
 
   const handleClick = () => {
     dispatch(nextPage());
-   dispatch(filterCard('all'));
     scroll.scrollToBottom();
   };
 
   return (
-     <ButtonWrap>
-      {/* { filter === 'all' &&  */}
-      <Button type="button" onClick={handleClick}>
+    <ButtonWrap>
+     {filter === 'all' && <Button type="button" onClick={handleClick}>
         Load more{" "}
         {isLoading && (
           <Oval
             height={20}
             width={20}
             color="#5736a3"
-            wrapperStyle={{}} 
+            wrapperStyle={{}}
             wrapperClass=""
             visible={true}
             ariaLabel="oval-loading"
@@ -39,9 +37,8 @@ const LoadMore = () => {
             strokeWidthSecondary={10}
           />
         )}
-      </Button> 
-      {/* } */}
-    </ButtonWrap> 
+      </Button>}
+    </ButtonWrap>
   );
 };
 

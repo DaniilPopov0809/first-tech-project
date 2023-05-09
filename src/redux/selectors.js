@@ -1,4 +1,5 @@
 import { createSelector } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 export const selectUsersCard = (state) => state.users.users;
 export const selectPage = (state) => state.users.page;
@@ -14,7 +15,14 @@ export const selectVisibleCards = createSelector(
   (cards, filter) => {
     if (filter === "all") {
       return cards;
+    }
+    else {
+       const newCards = cards.filter((card) => card.isFollowing === filter);
+       if (newCards.length === 0){
+        toast.info('User cards not found!');
+       }
+       return newCards;
     } 
-     return cards.filter((card) => card.isFollowing === filter);
+     
   }
 );

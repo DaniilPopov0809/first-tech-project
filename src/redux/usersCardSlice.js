@@ -18,7 +18,6 @@ const handlePending = (state) => {
 const handleRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
-  console.log(action.payload);
   toast.error(`${action.payload}`);
 };
 
@@ -71,7 +70,6 @@ export const usersSlice = createSlice({
         }
       })
       .addCase(fetchUserCards.rejected, handleRejected)
-      .addCase(enableFollow.pending, handlePending)
       .addCase(enableFollow.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
@@ -87,11 +85,8 @@ export const usersSlice = createSlice({
         });
       })
       .addCase(enableFollow.rejected, handleRejected)
-      .addCase(disableFollow.pending, handlePending)
       .addCase(disableFollow.fulfilled, (state, action) => {
-        state.isLoading = false;
         state.error = null;
-
         state.users = state.users.map((user) => {
           if (user.id === action.payload.id) {
             return {

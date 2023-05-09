@@ -1,9 +1,9 @@
 import messageImg from "../../images/message.png";
 import logo from "../../images/logo.png";
 import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { enableFollow, disableFollow } from "../../redux/operation";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { addUsersStatus } from "../../redux/usersCardSlice";
 import {
   Card,
@@ -17,32 +17,30 @@ import {
   AvatarWrap,
   Logo,
   InteractiveField,
+  User,
 } from "./UserCards.styled";
 
 const UserCard = ({ userCard }) => {
-  const { tweets, avatar, followers, id } = userCard;
+  const { tweets, avatar, followers, id, user } = userCard;
   const dispatch = useDispatch();
-
-  
-
   const [isFollowing, setIsFollowing] = useState( 
     () => JSON.parse(localStorage.getItem(`following_${id}`)) || false
   );
 
   useEffect(() => {
-    
-    localStorage.setItem(`following_${id}`, JSON.stringify(isFollowing));
     dispatch(addUsersStatus({id, isFollowing}));
+    localStorage.setItem(`following_${id}`, JSON.stringify(isFollowing));
+    
   }, [id, isFollowing, dispatch]);
 
   const handleClick = () => {
     setIsFollowing(!isFollowing);
     if (isFollowing === false) {
-      dispatch(enableFollow({ id, followers, isFollowing }));
+      dispatch(enableFollow({ id, followers }));
       
     }
     if (isFollowing === true) {
-      dispatch(disableFollow({ id, followers, isFollowing }));
+      dispatch(disableFollow({ id, followers }));
       
     }
   };
@@ -56,6 +54,7 @@ const UserCard = ({ userCard }) => {
         <Avatar src={avatar} alt="avatar" />
       </AvatarWrap>
       <InteractiveField>
+        <User>{user}</User>
         <Tweet>{tweets.toLocaleString("en-US")} tweets</Tweet>
         <Follower>{followers.toLocaleString("en-US")} followers</Follower>
         {isFollowing ? (
@@ -74,12 +73,13 @@ const UserCard = ({ userCard }) => {
 
 export default UserCard;
 
-// UserCard.propTypes = {
-//   userCard: PropTypes.exact({
-//     user: PropTypes.string,
-//     tweets: PropTypes.number,
-//     followers: PropTypes.number,
-//     avatar: PropTypes.string,
-//     id: PropTypes.string,
-//   }),
-// };
+UserCard.propTypes = {
+  userCard: PropTypes.exact({
+    user: PropTypes.string,
+    tweets: PropTypes.number,
+    followers: PropTypes.number,
+    avatar: PropTypes.string,
+    id: PropTypes.string,
+    isFollowing: PropTypes.bool,
+  }),
+};

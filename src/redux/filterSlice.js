@@ -1,13 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export const filterSlice = createSlice({
-  name: 'filter',
-  initialState: 'all',
+  name: "filter",
+  initialState: "all",
   reducers: {
     filterCard(state, action) {
-        return action.payload;
-      },
+    //   localStorage.setItem(`filter`, JSON.stringify(action.payload ?? "all"));
+
+      return action.payload 
+    //   ?? "all";
     },
+  },
 });
 
 export const { filterCard } = filterSlice.actions;

@@ -76,6 +76,10 @@ const SharedTextStyle = styled.p`
   color: #ebd8ff;
 `;
 
+export const User = styled(SharedTextStyle)`
+  margin-bottom: 16px;
+`;
+
 export const Tweet = styled(SharedTextStyle)`
   margin-bottom: 16px;
 `;
@@ -109,4 +113,9 @@ export const GreenButton = styled(BlueButton)`
   background-color: #5cd3a8;
 `;
 
-export const InteractiveField = styled.div``;
+export const InteractiveField = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`;
