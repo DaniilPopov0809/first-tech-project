@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { fetchUserCards } from "../../redux/operation";
 import { selectPage, selectVisibleCards } from "../../redux/selectors";
 import UserCard from "../UserCard/UserCard";
-import { List, Item } from "./UserCardList.styled";
+import { List, Item, ListWrap } from "./UserCardList.styled";
 // import { filterCard } from "../../redux/filterSlice";
 
 const UserCardList = () => {
@@ -20,7 +20,7 @@ const UserCardList = () => {
   // },[dispatch])
 
   return (
-    <>
+    <ListWrap>
       <List>
         {usersCard.map((userCard) => (
           <Item key={userCard.id}>
@@ -28,7 +28,7 @@ const UserCardList = () => {
           </Item>
         ))}
       </List>
-    </>
+    </ListWrap>
   );
 };
 
