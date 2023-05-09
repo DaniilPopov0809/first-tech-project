@@ -1,7 +1,7 @@
 import messageImg from "../../images/message.png";
 import logo from "../../images/logo.png";
 import { useState, useEffect } from "react";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { enableFollow, disableFollow } from "../../redux/operation";
 import PropTypes from "prop-types";
 import { addUsersStatus } from "../../redux/usersCardSlice";
@@ -24,32 +24,30 @@ import {
 const UserCard = ({ userCard }) => {
   const { tweets, avatar, followers, id, user } = userCard;
   const dispatch = useDispatch();
-  const [isFollowing, setIsFollowing] = useState( 
+  const [isFollowing, setIsFollowing] = useState(
     () => JSON.parse(localStorage.getItem(`following_${id}`)) || false
   );
 
   useEffect(() => {
-    dispatch(addUsersStatus({id, isFollowing}));
+    dispatch(addUsersStatus({ id, isFollowing }));
     localStorage.setItem(`following_${id}`, JSON.stringify(isFollowing));
-    
   }, [id, isFollowing, dispatch]);
 
   const handleClick = () => {
     setIsFollowing(!isFollowing);
     if (isFollowing === false) {
       dispatch(enableFollow({ id, followers }));
-      toast.info(`You following ${user}!`)
-      
+      toast.info(`You following ${user}!`);
     }
     if (isFollowing === true) {
       dispatch(disableFollow({ id, followers }));
-      toast.info(`You unfollowing ${user}!`)
+      toast.info(`You unfollowing ${user}!`);
     }
   };
-  
+
   return (
     <Card>
-      <Logo src={logo} alt="logo"/>
+      <Logo src={logo} alt="logo" />
       <Image src={messageImg} alt="decoration" />
       <Line />
       <AvatarWrap>

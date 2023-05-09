@@ -15,14 +15,12 @@ export const selectVisibleCards = createSelector(
   (cards, filter) => {
     if (filter === "all") {
       return cards;
+    } else {
+      const newCards = cards.filter((card) => card.isFollowing === filter);
+      if (newCards.length === 0) {
+        toast.info("User cards not found!");
+      }
+      return newCards;
     }
-    else {
-       const newCards = cards.filter((card) => card.isFollowing === filter);
-       if (newCards.length === 0){
-        toast.info('User cards not found!');
-       }
-       return newCards;
-    } 
-     
   }
 );

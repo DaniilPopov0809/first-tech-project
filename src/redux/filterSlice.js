@@ -5,10 +5,7 @@ export const filterSlice = createSlice({
   initialState: "all",
   reducers: {
     filterCard(state, action) {
-    //   localStorage.setItem(`filter`, JSON.stringify(action.payload ?? "all"));
-
-      return action.payload 
-    //   ?? "all";
+      return action.payload;
     },
   },
 });

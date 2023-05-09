@@ -4,20 +4,15 @@ import { fetchUserCards } from "../../redux/operation";
 import { selectPage, selectVisibleCards } from "../../redux/selectors";
 import UserCard from "../UserCard/UserCard";
 import { List, Item, ListWrap } from "./UserCardList.styled";
-// import { filterCard } from "../../redux/filterSlice";
 
 const UserCardList = () => {
   const dispatch = useDispatch();
   const usersCard = useSelector(selectVisibleCards);
   const page = useSelector(selectPage);
-  
+
   useEffect(() => {
     dispatch(fetchUserCards(page));
   }, [dispatch, page]);
-
-  // useEffect(()=>{
-  //   dispatch(filterCard(JSON.parse(localStorage.getItem(`filter`)))) 
-  // },[dispatch])
 
   return (
     <ListWrap>

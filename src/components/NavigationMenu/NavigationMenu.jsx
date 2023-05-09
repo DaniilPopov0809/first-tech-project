@@ -1,4 +1,3 @@
-
 import { List, Item, Link } from "./NavigationMenu..styled";
 
 const NavigationMenu = () => {

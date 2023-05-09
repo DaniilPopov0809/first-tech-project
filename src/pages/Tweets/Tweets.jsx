@@ -13,8 +13,8 @@ const Tweets = () => {
   return (
     <PageWrap>
       <Wrap>
-      <BackButton />
-      <DropDown/>
+        <BackButton />
+        <DropDown />
       </Wrap>
       <UserCardList />
       {isVisible && <LoadMore />}
