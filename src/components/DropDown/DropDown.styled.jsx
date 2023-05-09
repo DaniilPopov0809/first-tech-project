@@ -7,34 +7,37 @@ export const selectStyle = {
   textTransform: "uppercase",
   fontSize: "18px",
   lineHeight: "22px",
-  color: "#373737",
+  color: "var(--text-color)",
   "&:hover .MuiOutlinedInput-notchedOutline": {
-    borderColor: "#5cd3a8",
+    borderColor: "var(--secondary-button-color)",
   },
   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-    borderColor: "#5cd3a8",
+    borderColor: "var(--secondary-button-color)",
   },
   ".MuiOutlinedInput-notchedOutline": {
-    borderColor: "#ebd8ff",
+    borderColor: "var(--primary-button-color)",
     borderRadius: "10px",
     borderWidth: "2px",
     boxShadow: "0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25)",
   },
   ".MuiSelect-icon": {
     padingTop: "10px",
-    color: "#373737",
+    color: "var(--text-color)",
     fontSize: "28px",
   },
-  "&.Mui-selected": { bgcolor: "#5cd3a8", minHeight: "auto" },
+  "&.Mui-selected": {
+    bgcolor: "var(--secondary-button-color)",
+    minHeight: "auto",
+  },
 };
 
 export const labelStyle = {
   padding: 0,
   textTransform: "uppercase",
   fontWeight: 600,
-  color: "#373737",
+  color: "var(--text-color)",
   "&.Mui-focused": {
-    color: "#373737",
+    color: "var(--text-color)",
   },
 };
 
@@ -43,8 +46,10 @@ export const menuItemsStyle = {
   fontSize: "18px",
   lineHeight: "22px",
   textTransform: "uppercase",
-  color: "#373737",
-  "&:hover, &:focus": { bgcolor: "#ebd8ff" },
-  "&.Mui-selected ": { bgcolor: "#5cd3a8" },
-  "&.Mui-selected:hover, &.Mui-selected:focus ": { bgcolor: "#5cd3a8" },
+  color: "var(--text-color)",
+  "&:hover, &:focus": { bgcolor: "var(--primary-button-color)" },
+  "&.Mui-selected ": { bgcolor: "var(--secondary-button-color)" },
+  "&.Mui-selected:hover, &.Mui-selected:focus ": {
+    bgcolor: "var(--secondary-button-color)",
+  },
 };

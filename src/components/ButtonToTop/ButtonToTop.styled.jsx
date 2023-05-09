@@ -3,13 +3,13 @@ import { BsFillArrowUpSquareFill } from "react-icons/bs";
 
 export const ToTop = styled(BsFillArrowUpSquareFill)`
   display: block;
-  color: #ebd8ff;
+  color: var(--primary-button-color);
   opacity: 0.75;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   &:hover,
   &:focus {
-    color: #5cd3a8;
+    color: var(--secondary-button-color);
   }
 `;
 
@@ -23,5 +23,4 @@ export const Button = styled.button`
   cursor: pointer;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  
 `;

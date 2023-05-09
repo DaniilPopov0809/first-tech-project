@@ -2,7 +2,7 @@
 
 ## **View aplication**
 
-![Screnshot view aplication](/src/screenshots/tweetCards.jpg)
+![Screnshot view aplication](/src/screenshots/weetCards.jpg)
 
 ## Technology stack
 

@@ -1,3 +1,12 @@
+:root {
+  --text-color: #373737;
+  --secondary-text-color: #ffffff;
+  --primary-button-color: #ebd8ff;
+  --secondary-button-color: #5cd3a8;
+  --body-color: rgba(248, 236, 255, 0.575);
+  --bar-color: #5d0594;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -5,7 +14,6 @@ body {
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 * {

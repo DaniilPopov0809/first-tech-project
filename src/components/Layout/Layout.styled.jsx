@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 
 export const Header = styled.header`
-background-color: #5d0594;
-box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
-`; 
+  background-color: var(--bar-color);
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
+`;
 
 export const Container = styled.div`
   padding-left: 16px;
@@ -22,8 +22,7 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.main`
-background-color: rgba(248, 236, 255, 0.575);
-
+  background-color: var(--body-color);
 `;
 
 export const Centered = styled.div`
@@ -33,8 +32,8 @@ export const Centered = styled.div`
   height: 100vh;
 `;
 export const Footer = styled.footer`
-background-color: #5d0594;
-box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.4);
+  background-color: var(--bar-color);
+  box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.4);
 `;
 
 export const FooterWrappper = styled.div`
@@ -47,7 +46,7 @@ export const FooterWrappper = styled.div`
 
 export const Copyright = styled.p`
   margin-bottom: 5px;
-  color: #373737;
+  color: var(--text-color);
   font-size: 20px;
   font-weight: 600;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -55,17 +54,15 @@ export const Copyright = styled.p`
 
 export const MailLink = styled.a`
   display: block;
-  color: #373737;
+  color: var(--text-color);
   font-size: 18px;
   font-weight: 600;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus,
   &:hover {
-    color: #fff;
+    color: var(--secondary-text-color);
   }
 `;
-

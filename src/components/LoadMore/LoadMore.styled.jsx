@@ -15,6 +15,6 @@ export const Button = styled(BlueButton)`
 
   &:hover,
   &:focus {
-    background: #5cd3a8;
+    background: var(--secondary-button-color);
   }
 `;

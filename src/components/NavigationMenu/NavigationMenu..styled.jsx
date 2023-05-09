@@ -12,19 +12,19 @@ export const Item = styled.li``;
 export const Link = styled(NavLink)`
   text-decoration: none;
   font-size: 32px;
-  color: #373737;
+  color: var(--text-color);
   font-weight: 600;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
   &:hover,
   &:focus {
-    color: #fff;
+    color: var(--secondary-text-color);
   }
 
   &.active {
     text-decoration: underline;
-    color: #fff;    
+    color: var(--secondary-text-color);
   }
 `;

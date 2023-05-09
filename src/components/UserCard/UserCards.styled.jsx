@@ -39,7 +39,7 @@ export const Line = styled.div`
   left: 0px;
   top: 214px;
 
-  background: #ebd8ff;
+  background: var(--primary-button-color);
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
     inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
 `;
@@ -55,7 +55,7 @@ export const AvatarWrap = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: #ebd8ff;
+  background: var(--primary-button-color);
   box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
     inset 0px -2.19582px 4.39163px #ae7be3,
     inset 0px 4.39163px 3.29372px #fbf8ff;
@@ -73,7 +73,7 @@ const SharedTextStyle = styled.p`
   font-size: 20px;
   line-height: 1.2;
   text-transform: uppercase;
-  color: #ebd8ff;
+  color: var(--primary-button-color);
 `;
 
 export const User = styled(SharedTextStyle)`
@@ -95,8 +95,8 @@ export const BlueButton = styled.button`
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
-  color: #373737;
-  background: #ebd8ff;
+  color: var(--text-color);
+  background: var(--primary-button-color);
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
   border: none;
@@ -110,12 +110,12 @@ export const BlueButton = styled.button`
 `;
 
 export const GreenButton = styled(BlueButton)`
-  background-color: #5cd3a8;
+  background-color: var(--secondary-button-color);
 `;
 
 export const InteractiveField = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;

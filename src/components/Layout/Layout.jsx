@@ -37,7 +37,7 @@ const Layout = () => {
               showFallback && (
                 <Centered>
                   <RotatingLines
-                    strokeColor="#ebd8ff"
+                    strokeColor="var(--primary-button-color)"
                     strokeWidth="5"
                     animationDuration="0.75"
                     width="96"
