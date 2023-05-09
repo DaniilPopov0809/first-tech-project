@@ -1,19 +1,18 @@
+import { lazy } from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
+import Layout from "./Layout/Layout";
 
-import { lazy } from 'react';
-import { Route, Routes, Navigate, HashRouter } from 'react-router-dom';
-import Layout from './Layout/Layout';
-
-const Home = lazy(() => import('./pages/Home/Home'));
-const Tweets = lazy(() => import('./pages/Tweets/Tweets'));
+const Home = lazy(() => import("./pages/Home/Home"));
+const Tweets = lazy(() => import("./pages/Tweets/Tweets"));
 
 function App() {
   return (
     <Routes>
-       <Route path="/" element={<Layout />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/tweets" element={<Tweets />} />
-        </Route>
         <Route path="*" element={<Navigate to="/" />} />
+      </Route>
     </Routes>
   );
 }
