@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/first-tech-project/static/css/main.e67b2085.css",
-    "main.js": "/first-tech-project/static/js/main.931588c4.js",
-    "static/js/485.b580a689.chunk.js": "/first-tech-project/static/js/485.b580a689.chunk.js",
-    "static/js/59.36ba931a.chunk.js": "/first-tech-project/static/js/59.36ba931a.chunk.js",
+    "main.css": "/first-tech-project/static/css/main.983b4a20.css",
+    "main.js": "/first-tech-project/static/js/main.17affbb2.js",
+    "static/js/485.a67266a7.chunk.js": "/first-tech-project/static/js/485.a67266a7.chunk.js",
+    "static/js/59.50d4c8e6.chunk.js": "/first-tech-project/static/js/59.50d4c8e6.chunk.js",
     "static/js/787.fa807d0e.chunk.js": "/first-tech-project/static/js/787.fa807d0e.chunk.js",
     "static/js/764.8fac4be1.chunk.js": "/first-tech-project/static/js/764.8fac4be1.chunk.js",
     "static/media/logo_tweet.png": "/first-tech-project/static/media/logo_tweet.baafe01b1e3d6d477acf.png",
     "index.html": "/first-tech-project/index.html",
-    "main.e67b2085.css.map": "/first-tech-project/static/css/main.e67b2085.css.map",
-    "main.931588c4.js.map": "/first-tech-project/static/js/main.931588c4.js.map",
-    "485.b580a689.chunk.js.map": "/first-tech-project/static/js/485.b580a689.chunk.js.map",
-    "59.36ba931a.chunk.js.map": "/first-tech-project/static/js/59.36ba931a.chunk.js.map",
+    "main.983b4a20.css.map": "/first-tech-project/static/css/main.983b4a20.css.map",
+    "main.17affbb2.js.map": "/first-tech-project/static/js/main.17affbb2.js.map",
+    "485.a67266a7.chunk.js.map": "/first-tech-project/static/js/485.a67266a7.chunk.js.map",
+    "59.50d4c8e6.chunk.js.map": "/first-tech-project/static/js/59.50d4c8e6.chunk.js.map",
     "787.fa807d0e.chunk.js.map": "/first-tech-project/static/js/787.fa807d0e.chunk.js.map",
     "764.8fac4be1.chunk.js.map": "/first-tech-project/static/js/764.8fac4be1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e67b2085.css",
-    "static/js/main.931588c4.js"
+    "static/css/main.983b4a20.css",
+    "static/js/main.17affbb2.js"
   ]
 }
