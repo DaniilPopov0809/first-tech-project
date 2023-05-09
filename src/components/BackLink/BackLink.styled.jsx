@@ -1,6 +1,5 @@
-import styled from "@emotion/styled"; 
+import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-
 
 export const BackLink = styled(Link)`
   display: inline-block;
@@ -21,5 +20,6 @@ export const BackLink = styled(Link)`
   &:hover,
   &:focus {
     scale: 1.05;
+    background: #5cd3a8;
   }
 `;

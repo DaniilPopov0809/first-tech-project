@@ -25,8 +25,8 @@ const ButtonToTop = () => {
   return (
     <>
       {visibleButton && (
-        <Button type="button" onClick={handleClick}>
-          <ToTop size={40} />
+        <Button type="button" onClick={handleClick} tabIndex="1">
+          <ToTop size={40} tabIndex="0"/>
         </Button>
       )}
     </>

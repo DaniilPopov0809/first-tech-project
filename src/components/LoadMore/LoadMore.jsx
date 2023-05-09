@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { nextPage } from "../../redux/usersCardSlice";
 import { ButtonWrap } from "./LoadMore.styled";
 import { Button } from "./LoadMore.styled";
-import { selectIsLoading } from "../../redux/selectors";
-import { selectFilter } from "../../redux/selectors";
+import { selectFilter, selectIsLoading } from "../../redux/selectors";
 
 const Scroll = require("react-scroll");
 
@@ -17,6 +16,7 @@ const LoadMore = () => {
   const handleClick = () => {
     dispatch(nextPage());
     scroll.scrollToBottom();
+    
   };
 
   return (

@@ -12,4 +12,10 @@ export const Button = styled(BlueButton)`
   margin-bottom: 0;
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    background: #5cd3a8;
+  }
+  
 `;

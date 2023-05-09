@@ -1,21 +1,6 @@
 import styled from "@emotion/styled";
 import { BsFillArrowUpSquareFill } from "react-icons/bs";
 
-export const Button = styled.button`
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-
-  &:focus {
-    border: 1px solid #373737;
-    border-radius: 5px;
-  }
-`;
-
 export const ToTop = styled(BsFillArrowUpSquareFill)`
   display: block;
   color: #ebd8ff;
@@ -24,6 +9,16 @@ export const ToTop = styled(BsFillArrowUpSquareFill)`
 
   &:hover,
   &:focus {
-    opacity: 1;
+    color: #5cd3a8;
   }
+`;
+
+export const Button = styled.button`
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 `;
