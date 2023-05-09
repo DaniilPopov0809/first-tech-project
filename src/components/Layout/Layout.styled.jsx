@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const Header = styled.header`
 background-color: #5d0594;
-box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.4);
+box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
 `; 
 
 export const Container = styled.div`
@@ -34,7 +34,7 @@ export const Centered = styled.div`
 `;
 export const Footer = styled.footer`
 background-color: #5d0594;
-box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.4);
+box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.4);
 `;
 
 export const FooterWrappper = styled.div`
@@ -50,6 +50,7 @@ export const Copyright = styled.p`
   color: #373737;
   font-size: 20px;
   font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 `;
 
 export const MailLink = styled.a`
@@ -57,6 +58,7 @@ export const MailLink = styled.a`
   color: #373737;
   font-size: 18px;
   font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);

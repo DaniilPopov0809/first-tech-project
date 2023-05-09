@@ -16,6 +16,7 @@ export const Link = styled(NavLink)`
   font-weight: 600;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
   &:hover,
   &:focus {
