@@ -51,7 +51,7 @@ const UserCard = ({ userCard }) => {
       <Image src={messageImg} alt="decoration" />
       <Line />
       <AvatarWrap>
-        <Avatar src={avatar} alt="avatar" />
+        <Avatar src={avatar} alt="avatar" width={62}/>
       </AvatarWrap>
       <InteractiveField>
         <User>{user}</User>

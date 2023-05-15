@@ -63,8 +63,6 @@ export const AvatarWrap = styled.div`
 
 export const Avatar = styled.img`
   border-radius: 50%;
-  width: 62px;
-  height: 62px;
 `;
 
 const SharedTextStyle = styled.p`
