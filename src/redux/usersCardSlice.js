@@ -29,6 +29,10 @@ export const usersSlice = createSlice({
     nextPage(state) {
       state.page = state.page + 1;
     },
+
+    visibleButton(state, action) {
+      state.isVisible = action.payload;
+    }
   },
 
   extraReducers: (builder) => {
@@ -81,4 +85,4 @@ export const usersSlice = createSlice({
 });
 
 export const usersReducer = usersSlice.reducer;
-export const { nextPage } = usersSlice.actions;
+export const { nextPage, visibleButton } = usersSlice.actions;

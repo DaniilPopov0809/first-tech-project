@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { nextPage } from "../../redux/usersCardSlice";
 import { ButtonWrap } from "./LoadMore.styled";
 import { Button } from "./LoadMore.styled";
-import { selectIsLoading } from "../../redux/selectors";
+import { selectIsLoading, selectStatusLoadMoreButton } from "../../redux/selectors";
 
 const Scroll = require("react-scroll");
 
@@ -11,6 +11,7 @@ const LoadMore = () => {
   const scroll = Scroll.animateScroll;
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
+  const isVisible = useSelector(selectStatusLoadMoreButton);
 
   const handleClick = (event) => {
     event.target.blur();
@@ -20,7 +21,7 @@ const LoadMore = () => {
 
   return (
     <ButtonWrap>
-      <Button type="button" onClick={handleClick}>
+      {isVisible && <Button type="button" onClick={handleClick}>
         Load more{" "}
         {isLoading && (
           <Oval
@@ -36,7 +37,7 @@ const LoadMore = () => {
             strokeWidthSecondary={10}
           />
         )}
-      </Button>
+      </Button> }
     </ButtonWrap>
   );
 };
