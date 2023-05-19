@@ -20,27 +20,32 @@ import {
   InteractiveField,
   User,
 } from "./UserCards.styled";
+import { filterStore } from "../../services/utils";
 
 const UserCard = ({ userCard }) => {
   const { tweets, avatar, followers, id, user } = userCard;
+  const store = JSON.parse(localStorage.getItem(`following`));
+
   const dispatch = useDispatch();
-  const [isFollowing, setIsFollowing] = useState(
-    () => JSON.parse(localStorage.getItem(`following_${id}`)) || false
-  );
+  const [isFollowing, setIsFollowing] = useState(() => filterStore(store, id));
+  const [stateFollowing, setStateFollowing] = useState(() => store || []);
 
   useEffect(() => {
-    dispatch(addUsersStatus({ id, isFollowing }));
-    localStorage.setItem(`following_${id}`, JSON.stringify(isFollowing));
-  }, [id, isFollowing, dispatch]);
+    dispatch(addUsersStatus({ id, stateFollowing }));
+    localStorage.setItem(`following`, JSON.stringify(stateFollowing));
+  }, [id, isFollowing, stateFollowing, dispatch]);
 
   const handleClick = () => {
+    setStateFollowing(store);
     setIsFollowing(!isFollowing);
     if (isFollowing === false) {
       dispatch(enableFollow({ id, followers }));
+      setStateFollowing((pervState) => [...pervState, ...id]);
       toast.info(`You following ${user}!`);
     }
     if (isFollowing === true) {
       dispatch(disableFollow({ id, followers }));
+      setStateFollowing((pervState) => pervState.filter((el) => el !== id));
       toast.info(`You unfollowing ${user}!`);
     }
   };
@@ -51,7 +56,7 @@ const UserCard = ({ userCard }) => {
       <Image src={messageImg} alt="decoration" />
       <Line />
       <AvatarWrap>
-        <Avatar src={avatar} alt="avatar" width={62}/>
+        <Avatar src={avatar} alt="avatar" width={62} />
       </AvatarWrap>
       <InteractiveField>
         <User>{user}</User>
