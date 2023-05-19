@@ -38,7 +38,7 @@ const UserCard = ({ userCard }) => {
     setIsFollowing(!isFollowing);
     if (isFollowing === false) {
       dispatch(enableFollow({ id, followers }));
-      setStateFollowing((pervState) => [...pervState, ...id]);
+      setStateFollowing((pervState) => [...pervState, id]);
       toast.info(`You following ${user}!`);
     }
     if (isFollowing === true) {
