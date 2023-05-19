@@ -29,27 +29,6 @@ export const usersSlice = createSlice({
     nextPage(state) {
       state.page = state.page + 1;
     },
-
-    addUsersStatus(state, action) {
-      const findUserIndex = state.users.findIndex(
-        (user) => user.id === action.payload.id
-      );
-
-      if (findUserIndex !== -1) {
-        state.users[findUserIndex] = {
-          ...state.users[findUserIndex],
-          isFollowing: action.payload.isFollowing,
-        };
-      } else {
-        state.users = [
-          ...state.users,
-          {
-            ...state.users.find((user) => user.id === action.payload.id),
-            isFollowing: action.payload.isFollowing,
-          },
-        ];
-      }
-    },
   },
 
   extraReducers: (builder) => {
@@ -102,4 +81,4 @@ export const usersSlice = createSlice({
 });
 
 export const usersReducer = usersSlice.reducer;
-export const { nextPage, addUsersStatus } = usersSlice.actions;
+export const { nextPage } = usersSlice.actions;

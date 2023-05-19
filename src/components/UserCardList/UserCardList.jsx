@@ -8,6 +8,7 @@ import { List, Item, ListWrap } from "./UserCardList.styled";
 const UserCardList = () => {
   const dispatch = useDispatch();
   const usersCard = useSelector(selectVisibleCards);
+
   const page = useSelector(selectPage);
 
   useEffect(() => {

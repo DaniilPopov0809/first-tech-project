@@ -42,11 +42,10 @@ const DropDown = () => {
           <MenuItem value={"all"} sx={menuItemsStyle}>
             All
           </MenuItem>
-          <MenuItem value={false} sx={menuItemsStyle}>
+          <MenuItem value={"follow"} sx={menuItemsStyle}>
             Follow
           </MenuItem>
-          <MenuItem value={true} sx={menuItemsStyle}>
-            {" "}
+          <MenuItem value={"following"} sx={menuItemsStyle}>
             Followings
           </MenuItem>
         </Select>

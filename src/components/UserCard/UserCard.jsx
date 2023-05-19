@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { enableFollow, disableFollow } from "../../redux/operation";
 import PropTypes from "prop-types";
-import { addUsersStatus } from "../../redux/usersCardSlice";
 import { toast } from "react-toastify";
 import {
   Card,
@@ -31,7 +30,6 @@ const UserCard = ({ userCard }) => {
   const [stateFollowing, setStateFollowing] = useState(() => store || []);
 
   useEffect(() => {
-    dispatch(addUsersStatus({ id, stateFollowing }));
     localStorage.setItem(`following`, JSON.stringify(stateFollowing));
   }, [id, isFollowing, stateFollowing, dispatch]);
 
